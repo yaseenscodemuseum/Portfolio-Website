@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website | Mohammad Yaseen Abdul Aziz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-bg light-bg"></div>
+    <div class="theme-bg dark-bg"></div>
+
+    <nav class="nav-container">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="certifications.html" class="nav-item">Certifications</a>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <div class="theme-container">
+            <button class="theme-toggle" id="themeToggle">
+                <div class="theme-slider"></div>
+            </button>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="project-detail-section">
+            <div class="project-detail-card" data-aos="fade-up">
+                <a href="projects.html" class="back-button">Back to Projects</a>
+                <center><h2>Portfolio Website</h2></center>
+                <div class="project-meta">
+                    <center><span class="date">March 2025</span></center>
+                </div>
+                <div class="project-body">
+                    <h3>Description</h3>
+                    <p class="project-description">
+                        This portfolio website is a personal showcase of my skills, certifications, and projects as a final-year Computer Science Engineering student specializing in Artificial Intelligence. 
+                        It features a responsive design with light and dark themes, smooth navigation transitions, and sections for my education, experience, certifications, and projects. 
+                        Built from scratch, it reflects my passion for web development and design. The design draws inspiration from modern minimalism, with a focus on readability and user experience across devices.
+                    </p>
+                    <h3>How I Made It</h3>
+                    <p class="project-description">
+                        <li>Front-End uses <b>HTML5</b> and <b>CSS3</b>, leveraging custom variables for theming and a flexible grid system for responsiveness.</li>
+                        <br>
+                        <li><b>JavaScript</b> powers the interactivity, including a theme toggle that persists via localStorage, smooth scrolling navigation, and fade-in animations with the AOS library.</li>
+                        <br>
+                        <li>The navigation system uses event listeners to handle both internal section scrolling and external page transitions with a fade-out overlay effect.</li> 
+                        <br> 
+                        <li> libraries like Font Awesome for icons and AOS for animations were integrated via CDNs.</li> 
+                    </p>
+                    <h3>Challenges Faced</h3>
+                    <p class="project-description">
+                        <li>Coordinating the theme switch was tricky—ensuring all elements (text, backgrounds, buttons) updated seamlessly required careful CSS variable management and testing across light/dark modes.</li>
+                        <br> 
+                        <li> Navigation logic posed a challenge; I had to balance smooth scrolling for single-page sections with fade-out transitions for external pages, which involved tweaking timeouts and 
+                        overlay styles.</li>
+                        <br>
+                        <li>Responsiveness was another hurdle—aligning the hero section’s text and image on mobile devices took multiple media query adjustments.</li>
+                        <br>
+                        <li>Debugging AOS animations to ensure they fired consistently across page loads also required trial and error.</li>
+                    </p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/yaseenscodemuseum/portfolio-website" class="document-button" target="_blank">View Code</a>
+                        <a href="https://yaseensportfolio.vercel.app/" class="document-button" target="_blank">Live Website</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
