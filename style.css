@@ -962,6 +962,24 @@ body.dark-theme .project-detail-card {
     border-color: rgba(202, 120, 121, 0.1);
 }
 
+/* Logo styling */
+.logo-container {
+    position: absolute;
+    top: 18px;
+    left: 29px;
+}
+
+.logo {
+    height: 75px; /* Adjust based on preference */
+    width: auto;
+}
+
+/* Adjust for dark mode */
+body.dark-theme .logo {
+    filter: invert(1); /* Inverts color for dark mode */
+}
+
+
 .social-links {
     display: flex;
     gap: 1.5rem;
