@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expensify Project | Mohammad Yaseen Abdul Aziz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-bg light-bg"></div>
+    <div class="theme-bg dark-bg"></div>
+
+    <a href="portfolioproject.html" class="logo-container">
+        <img src="backgrounds/logo.svg" alt="Logo" class="logo">
+    </a>
+
+    <nav class="nav-container">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="certifications.html" class="nav-item">Certifications</a>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <div class="theme-container">
+            <button class="theme-toggle" id="themeToggle">
+                <div class="theme-slider"></div>
+            </button>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="project-detail-section">
+            <div class="project-detail-card" data-aos="fade-up">
+                <a href="projects.html" class="back-button">Back to Projects</a>
+                <center><h2>Expensify - Expense Tracker</h2></center>
+                <div class="project-meta">
+                    <center><span class="date">March 2025</span></center>
+                </div>
+                <div class="project-body">
+                    <h3>Description</h3>
+                    <p class="project-description">
+                        Expensify is a modern expense tracking web application that allows users to add, edit, delete, and sort their financial records with ease. 
+                        Designed with a sleek dark theme, animated landing page, and a powerful backend, this project showcases full-stack web development expertise.
+                    </p>
+                    <h3>How I Made It</h3>
+                    <p class="project-description">
+                        <li>Front-End built with <b>React.js</b>, utilizing <b>Framer Motion</b> for smooth animations and <b>CSS3</b> for a responsive dark-themed UI.</li>
+                        <br>
+                        <li>Implemented <b>localStorage</b> for data persistence, ensuring expenses remain even after page refresh.</li>
+                        <br>
+                        <li>Backend developed with <b>Node.js</b> and <b>Express.js</b>, connected to a <b>MongoDB Atlas</b> database for secure data storage.</li>
+                        <br>
+                        <li>Hosted on <b>Vercel</b> for front-end deployment and <b>Render</b> for backend API hosting.</li>
+                        <br>
+                        <li>Created a dynamic sorting feature, allowing expenses to be sorted by name or date with just a click.</li>
+                    </p>
+                    <h3>Challenges Faced</h3>
+                    <p class="project-description">
+                        <li>Integrating MongoDB Atlas required whitelisting the correct IP addresses and troubleshooting authentication issues.</li>
+                        <br>
+                        <li>Fixing a bug where the expense list would not persist required implementing <b>localStorage</b> correctly and ensuring the state updates properly.</li>
+                        <br>
+                        <li>Deploying the backend on Render was challenging due to environment variable conflicts.</li>
+                        <br>
+                        <li>GitHub rejected an early push due to an exposed JWT key; we quickly revoked and replaced it while properly configuring <b>.gitignore</b> to prevent future leaks.</li>
+                        <br>
+                        <li>The animated landing page required precise timing to ensure smooth transitions without performance issues.</li>
+                    </p>
+                    <h3>Key Wins</h3>
+                    <p class="project-description">
+                        <li>Successfully deployed a full-stack project with authentication, a database, and a user-friendly UI.</li>
+                        <br>
+                        <li>Overcame deployment challenges and gained hands-on experience with Vercel and Render.</li>
+                        <br>
+                        <li>Designed a professional, sleek UI that offers both functionality and aesthetic appeal.</li>
+                        <br>
+                        <li>Implemented an efficient sorting and filtering system that enhances the user experience.</li>
+                    </p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/yaseenscodemuseum/Expensify" class="document-button" target="_blank">View Code</a>
+                        <a href="https://expensifytracker.vercel.app/" class="document-button" target="_blank">Live Website</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

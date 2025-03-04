@@ -307,6 +307,7 @@ body:not(.dark-theme) .name {
 
 .project-card {
     padding: 2rem;
+    margin-top: 2%;
     border-radius: 1.5rem;
     background: rgba(100, 255, 218, 0.05);
     border: 1px solid rgba(100, 255, 218, 0.15);
