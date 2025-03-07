@@ -67,8 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelectorAll(".project-card").forEach((card) => {
     card.addEventListener("click", function (event) {
         // Prevent navigation if clicking inside a button or link
-        if (!event.target.closest("a") && !event.target.closest("button")) {
-            window.location.href = this.getAttribute("href");
+        if (!event.target.closest(".project-buttons a")) {
+            const projectLink = this.querySelector(".project-link");
+            if (projectLink) {
+                window.location.href = projectLink.getAttribute("href");
+            }
         }
     });
 });
