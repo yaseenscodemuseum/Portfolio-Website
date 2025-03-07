@@ -28,6 +28,12 @@ body.dark-theme {
     color: var(--text-dark); /* White text for dark mode */
 }
 
+/* Disable tap highlight on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+
 .content-wrapper {
     position: relative;
     z-index: 1;
@@ -898,6 +904,7 @@ body.dark-theme .project-card {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    text-decoration: none;
   }
 
   /* Remove default link styling */
@@ -1028,50 +1035,266 @@ body.dark-theme .social-icon {
     color: #e4405f; /* Instagram pink */
 }
 
-@media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      padding: 2rem;
-    }
-  
-    .profile-image-container {
-      position: relative;
-      top: auto;
-      right: auto;
-      transform: none;
-      width: 50%;
-      margin: 2rem auto 0;
-      order: 2;
-    }
-  
-    .name, .brief, .social-links {
-      width: 100%;
-      margin-left: 0;
-      padding-left: 0;
-      text-align: center;
-    }
-  
-    .social-links {
-      justify-content: center;
-      margin-left: 0;
-    }
-  
-    @media (min-width: 480px) {
-      .hero {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      
-      .name, .brief, .social-links {
-        width: 60%;
-        text-align: left;
-      }
-      
-      .profile-image-container {
-        width: 35%;
-        margin: 0;
-        order: 2;
-      }
-    }
+/* ----- Desktop (default) styles remain unchanged ----- */
+
+/* ----- Medium Screen Adjustments (768px to 1024px) ----- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Hero Section */
+  .hero {
+    height: 80vh;               /* Reduced hero section height */
+    padding: 1.5rem 2rem;        /* Reduced padding */
   }
+  
+  /* Text Containers: Align left and reduce widths */
+  .name,
+  .brief,
+  .social-links {
+    width: 50%;                 /* Reduced from 60% */
+    margin-left: 5%;            /* Less left margin */
+    text-align: left;
+  }
+  
+  .name {
+    font-size: clamp(3.5rem, 6vw, 4rem);  /* Adjusted heading font-size */
+    margin-bottom: 1.5rem;
+  }
+  
+  .brief {
+    font-size: 1.3rem;          /* Slightly smaller paragraph text */
+    line-height: 1.4;           /* Reduced line height */
+    text-align: left;
+  }
+  
+  /* Social Icons: Make them a bit smaller */
+  .social-icon {
+    font-size: 1rem;
+  }
+  
+  /* Hide Logo & Profile Image */
+  .logo-container,
+  .profile-image-container {
+    display: none;
+  }
+  
+  /* Education Section: Left align and reduce sizes */
+  .education-section,
+  .degree,
+  .university {
+    text-align: left;
+    margin-left: 5%;
+    font-size: 0.9rem;  /* Adjust as needed */
+  }
+  
+  /* Experience Section: Left align and reduce item size */
+  .experience-section {
+    text-align: left;
+    margin-left: 5%;
+  }
+  .experience-item {
+    font-size: 1rem;    /* Reduced experience item size */
+    margin: 1rem 0;
+  }
+  
+  /* Optionally, reduce navbar & theme slider sizes for medium screens if desired */
+  .nav-container {
+    padding: 0.8rem 1.5rem;
+  }
+  .nav-item {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  .theme-toggle {
+    width: 5rem;
+    height: 2.5rem;
+  }
+  .theme-slider {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ----- Mobile Adjustments (below 768px) ----- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem 1rem;   /* Added extra top padding so the name doesn't start behind the navbar */
+    flex-direction: column;   /* Stack elements vertically */
+    text-align: left;         /* Align text to the left */
+  }
+
+    /* Navbar & Theme Slider Adjustments */
+  .nav-container {
+    padding: 0.5rem .7rem;  /* Reduced padding */
+    width: 95%;
+    top: 1rem;           /* Slightly lower from top */
+  }
+  .nav-item {
+    padding: 0.3rem 0.8rem;  /* Reduced padding */
+    font-size: 0.8rem;       /* Smaller font size */
+  }
+  /* Ensure the theme container stays inside the navbar */
+  .theme-container {
+    position: relative;  /* Remove absolute positioning */
+    right: 2%;
+    transform: none;
+    margin-left: 30px;
+  }
+  .theme-toggle {
+    width: 4rem;         /* Reduced size */
+    height: 1.6rem;
+  }
+  .theme-slider {
+    width: 0rem;       /* Reduced slider size */
+    height: 1.3rem;
+    font-size: 1rem;     /* Smaller icon size */
+  }
+  
+  /* Text Containers: Full-width & left aligned */
+  .name,
+  .brief,
+  .social-links {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .name {
+    font-size: clamp(2.5rem, 8vw, 3rem); /* Reduced heading size */
+    margin-top: 70%;
+    margin-bottom: 1rem;
+  }
+  
+  .brief {
+    font-size: 1.3rem;       /* Reduced paragraph text size */
+    line-height: 1.4;      /* Reduced line height */
+    margin-bottom: 1rem;
+  }
+  
+  /* Social Icons: Smaller */
+  .social-icon {
+    font-size: 1.4rem;
+  }
+
+  .about-header{
+    font-size: 2.4rem;
+    margin-top: 0;
+    left: 0;
+  }
+
+  .profile-overview{
+    font-size: 1.1rem;
+    line-height: 1.4;      /* Reduced line height */
+    margin-bottom: 1rem;
+  }
+  
+.resume-button {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+.profile-image-container {
+    position: absolute;
+    top: 45%;
+    left: 13%;
+    transform: translateY(-50%);
+    width: 75%;
+    height: 66%;
+    z-index: 1;
+    perspective: 1000px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Rounded corners instead of circular */
+    transform: rotate(2deg);
+    transition: all 0.5s ease;
+    object-fit: cover;
+    aspect-ratio: 1; /* Keep it square */
+}
+
+  /* Hide Logo & Profile Image */
+  .logo-container{
+    display: none;
+  }
+  
+  /* Education Section: Left align and reduced sizes */
+  .education-section h2{
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    left: 0;
+  }
+
+  .degree{
+    font-size: 1.5rem;
+    line-height: 1.4;      /* Reduced line height */
+  }
+
+  .university{
+    font-size: 1.1rem;
+    line-height: 1.4;      /* Reduced line height */
+    margin-bottom: 1rem;
+  }
+  
+  /* Experience Section: Left align and reduced sizes */
+  .experience-section h2 {
+    font-size: 2.4rem;
+    margin-top: 0;
+    left: 0;
+  }
+
+  .experience-role {
+    font-size: 1.7rem;
+    line-height: 1.4;      /* Reduced line height */
+  }
+
+  .experience-org{
+    font-size: 1.1rem;
+    line-height: 1.2;      /* Reduced line height */
+  }
+
+  .experience-bullets{
+    font-size: 1.1rem;
+    line-height: 1.4;      /* Reduced line height */
+    margin-bottom: 1rem;
+  }
+
+  .document-button{
+    font-size: .8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .certifications-section h1{
+    font-size: clamp(2.5rem, 8vw, 3rem); /* Reduced heading size */
+    margin-top: 4rem;      /* Extra top margin */
+    margin-bottom: 1rem;
+  }
+
+.certification-description{
+    overflow: hidden;
+}
+
+.section-heading{
+    font-size: clamp(3.5rem, 8vw, 3rem); /* Reduced heading size */
+    margin-top: 4rem;      /* Extra top margin */
+    margin-bottom: 1rem;
+}
+
+.project-header h2{
+    font-size: 1rem;
+    line-height: 1.4;      /* Reduced line height */
+}
+
+.project-card{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+}
