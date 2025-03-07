@@ -1291,6 +1291,7 @@ body.dark-theme .social-icon {
 
 .certification-description{
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .section-heading{
