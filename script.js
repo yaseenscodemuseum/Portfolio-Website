@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 800, once: true, disable: window.innerWidth < 768 });
 
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
