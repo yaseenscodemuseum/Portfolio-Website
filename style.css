@@ -822,24 +822,36 @@ body.dark-theme .project-card {
     border-color: rgba(202, 120, 121, 0.1);
 }
 
-.project-header h2 a {
+.project-header h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    margin-top: 0;
     color: inherit;
     text-decoration: none;
 }
 
-.project-header h2 a:hover {
-    color: #64ffda;
+.project-card .project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.project-card:hover .project-header h2 {
+    color: #64ffda; /* Color change on hover */
+}
+
+.project-card .project-buttons a {
+    pointer-events: auto; /* Ensure buttons work */
 }
 
 .project-meta {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .project-description {
@@ -1288,8 +1300,12 @@ body.dark-theme .social-icon {
 }
 
 .project-header h2{
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.4;      /* Reduced line height */
+}
+
+.project-meta {
+    margin-top: 1.2rem;
 }
 
 .project-card{

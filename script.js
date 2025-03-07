@@ -62,3 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Make entire project card clickable, except for buttons and links
+document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("click", function (event) {
+        // Prevent navigation if clicking inside a button or link
+        if (!event.target.closest("a") && !event.target.closest("button")) {
+            window.location.href = this.getAttribute("href");
+        }
+    });
+});
