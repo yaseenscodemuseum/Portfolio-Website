@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eye See - Face Detection AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="theme-bg light-bg"></div>
+  <div class="theme-bg dark-bg"></div>
+
+  <a href="portfolioproject.html" class="logo-container">
+    <img src="backgrounds/logo.svg" alt="Logo" class="logo" />
+  </a>
+
+  <nav class="nav-container">
+    <a href="index.html" class="nav-item">Home</a>
+    <a href="certifications.html" class="nav-item">Certifications</a>
+    <a href="projects.html" class="nav-item">Projects</a>
+    <div class="theme-container">
+      <button class="theme-toggle" id="themeToggle">
+        <div class="theme-slider"></div>
+      </button>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <section class="project-detail-section">
+      <div class="project-detail-card" data-aos="fade-up">
+        <a href="projects.html" class="back-button">Back to Projects</a>
+        <center><h2>Eye_See - Face Detection Desktop App</h2></center>
+        <div class="project-meta">
+          <center><span class="date">April 2025</span></center>
+        </div>
+        <div class="project-body">
+          <h3>Description</h3>
+          <p class="project-description">
+            Eye See is a real-time face detection desktop app built with Python, PyQt5, and OpenCV DNN. It features a glowing pixel UI, animated camera feed, and can save dual snapshots (with and without detection) using a ResNet SSD model for accuracy.
+          </p>
+
+          <div class="image-group">
+            <img src="backgrounds/snap1.png" alt="Original capture" class="project-image">
+            <img src="backgrounds/snap1_imagedetect.png" alt="Face detection result" class="project-image">
+            <p class="image-caption">1. Low light face detection comparison showing original and processed output</p>
+          </div>
+
+          <div class="image-group">
+            <img src="backgrounds/snap3.png" alt="Original capture" class="project-image">
+            <img src="backgrounds/snap3_imagedetect.png" alt="Face detection result" class="project-image">
+            <p class="image-caption">2. Side profile detection</p>
+          </div>
+
+          <div class="image-group">
+            <img src="backgrounds/snap6.png" alt="Original capture" class="project-image">
+            <img src="backgrounds/snap6_imagedetect.png" alt="Face detection result" class="project-image">
+            <p class="image-caption">3. Detection in different poses</p>
+          </div>
+
+          <div class="image-group">
+          <img src="backgrounds/snap7.png" alt="Original capture" class="project-image">
+          <img src="backgrounds/snap7_imagedetect.png" alt="Face detection result" class="project-image">
+          <p class="image-caption">4. Doesn't detect random mask faces or just anything with eyes</p>
+        </div>
+
+        <div class="image-group">
+          <img src="backgrounds/snap12.png" alt="Original capture" class="project-image">
+          <img src="backgrounds/snap12_imagedetect.png" alt="Face detection result" class="project-image">
+          <p class="image-caption">5. Detection on the phone through a blurry webcam</p>
+        </div>
+
+        <div class="image-group">
+          <img src="backgrounds/snap16.png" alt="Original capture" class="project-image">
+          <img src="backgrounds/snap16_imagedetect.png" alt="Face detection result" class="project-image">
+          <p class="image-caption">6. Multiple person selection on a phone</p>
+        </div>
+
+          <h3>How I Made It</h3>
+          <p class="project-description">
+            <li>Built with <b>PyQt5</b> to create a custom dark GUI with glow effects and responsive layout.</li><br>
+            <li>Implemented OpenCV's <b>DNN Face Detection</b> using SSD + ResNet (Caffe model) for modern facial recognition.</li><br>
+            <li>Used <b>QGraphicsDropShadowEffect</b> for pixel glow aesthetics on UI labels.</li><br>
+            <li>Auto-saves each snapshot with incrementing names for both raw and processed frames.</li><br>
+            <li>Packaged into a double-clickable app using a simple .bat launcher and Python 3.13 compatibility.</li>
+          </p>
+
+          <h3>Challenges Faced</h3>
+          <p class="project-description">
+            <li>MediaPipe was incompatible with Python 3.13 — switched to OpenCV DNN for better compatibility.</li><br>
+            <li>Creating glowing text in PyQt required graphic effects, as CSS `text-shadow` isn't supported in Qt style sheets.</li><br>
+            <li>Ensured the app worked across resolutions and handled webcam errors gracefully.</li>
+          </p>
+
+          <h3>Key Wins</h3>
+          <p class="project-description">
+            <li>Built a desktop AI utility with a rich UI and modern detection backend.</li><br>
+            <li>Delivered responsive snapshots with clean auto-naming and a smooth user experience.</li><br>
+            <li>Achieved high detection accuracy using a ResNet-SSD pipeline with OpenCV.</li><br>
+            <li>Bridged creative design with machine learning for a polished user tool.</li>
+          </p>
+
+          <div class="project-buttons">
+            <a href="https://github.com/yaseenscodemuseum/EyeSee" class="document-button" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1047,6 +1047,46 @@ body.dark-theme .social-icon {
     color: #e4405f; /* Instagram pink */
 }
 
+
+.image-group {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-group .project-image {
+    width: 20%;  /* Reduced from 30% to 20% */
+    max-width: 600px; /* Reduced from 300px to 200px */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-group .project-image:hover {
+    transform: scale(1.02);
+}
+
+.image-caption {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Make sure images stay side by side on mobile */
+@media (max-width: 768px) {
+    .image-group .project-image {
+        width: 35%;  /* Reduced from 45% to 35% */
+        margin-bottom: 0.5rem;
+    }
+}
+
 /* ----- Desktop (default) styles remain unchanged ----- */
 
 /* ----- Medium Screen Adjustments (768px to 1024px) ----- */
@@ -1315,3 +1355,8 @@ body.dark-theme .social-icon {
 }
 
 }
+.image-group .project-image {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
