@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MewFlo - AI Playlist Maker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="theme-bg light-bg"></div>
+  <div class="theme-bg dark-bg"></div>
+
+  <a href="portfolioproject.html" class="logo-container">
+    <img src="backgrounds/logo.svg" alt="Logo" class="logo" />
+  </a>
+
+  <nav class="nav-container">
+    <a href="index.html" class="nav-item">Home</a>
+    <a href="certifications.html" class="nav-item">Certifications</a>
+    <a href="projects.html" class="nav-item">Projects</a>
+    <div class="theme-container">
+      <button class="theme-toggle" id="themeToggle">
+        <div class="theme-slider"></div>
+      </button>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <section class="project-detail-section">
+      <div class="project-detail-card" data-aos="fade-up">
+        <a href="projects.html" class="back-button">Back to Projects</a>
+        <center><h2>MewFlo - AI Playlist Maker</h2></center>
+        <div class="project-meta">
+          <center><span class="date">May 2025</span></center>
+        </div>
+        <div class="project-body">
+          <h3>Description</h3>
+          <p class="project-description">
+            MewFlo is a modern web app that uses AI to generate personalized music playlists. With a responsive UI built on React and Tailwind CSS, it integrates Spotify, OpenAI, and Google AI to deliver playlists based on your mood and preferences.
+          </p>
+
+          <h3>How I Made It</h3>
+          <p class="project-description">
+            <li>Used <b>React 18</b> and <b>TypeScript</b> for a modular, type-safe frontend.</li><br>
+            <li>Designed a responsive UI with <b>Tailwind CSS</b> and <b>Radix UI</b> for accessibility and polish.</li><br>
+            <li>Integrated <b>Spotify Web API</b> to fetch user data and manage playlist creation in real-time.</li><br>
+            <li>Used <b>Google AI</b> and <b>OpenAI</b> to analyze mood and generate playlist logic dynamically.</li><br>
+            <li>Built and deployed with <b>Vite</b> + <b>Node.js</b> backend on Vercel.</li>
+          </p>
+
+          <h3>Challenges Faced</h3>
+          <p class="project-description">
+            <li>Token management and rate-limiting while working with the Spotify API.</li><br>
+            <li>Creating smooth UI animations without sacrificing performance on mobile.</li><br>
+            <li>Handling async flow between AI services and Spotify results in real time.</li>
+          </p>
+
+          <h3>Key Wins</h3>
+          <p class="project-description">
+            <li>Delivered a fun, polished AI-powered tool for music lovers.</li><br>
+            <li>Seamless user experience across devices and screen sizes.</li><br>
+            <li>Integrated real-time mood analysis with practical playlist generation.</li><br>
+            <li>Fully deployed and publicly accessible on Vercel.</li>
+          </p>
+
+          <div class="project-buttons">
+            <a href="https://mewflo.vercel.app" class="document-button" target="_blank">Live Demo</a>
+            <a href="https://github.com/yaseenscodemuseum/MewFlo" class="document-button" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
